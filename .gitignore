@@ -71,3 +71,7 @@ Thumbs.db
 
 # Gemini specific
 .geminiignore
+
+# Backup directory
+.backup/
+.deletion_log
