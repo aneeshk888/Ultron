@@ -1,4 +1,6 @@
 from typing import Any, Dict
+import os
+import google.generativeai as genai
 from google.adk.agents import ParallelAgent
 from google.adk.agents import SequentialAgent
 from google.adk.agents import Agent, LlmAgent
@@ -9,6 +11,8 @@ from google.adk.sessions import InMemorySessionService
 from google.adk.runners import Runner
 from google.adk.tools.tool_context import ToolContext
 from google.genai import types
+
+
 print("✅ ADK components imported successfully.")
 
 # Define helper functions that will be reused throughout the notebook
@@ -52,6 +56,8 @@ async def run_session(
         # Process each query in the list sequentially
         for query in user_queries:
             print(f"\nUser > {query}")
+            with open("session.txt", "a") as f:
+                f.write(f"\nUser > {query}\n")
 
             # Convert the query string to the ADK Content format
             query = types.Content(role="user", parts=[types.Part(text=query)])
@@ -67,7 +73,10 @@ async def run_session(
                         event.content.parts[0].text != "None"
                         and event.content.parts[0].text
                     ):
-                        print(f"{model_name} > ", event.content.parts[0].text)
+                        response_text = event.content.parts[0].text
+                        print(f"{model_name} > ", response_text)
+                        with open("session.txt", "a") as f:
+                            f.write(f"{model_name} > {response_text}\n")
     else:
         print("No queries!")
 
@@ -252,9 +261,9 @@ Your responsibility is to coordinate Hair-Care, Skin-Care, Gym-Care, and Meal-Pl
 • Forward the user message to the correct agent(s).
 • Collect their responses and merge them into one unified, clean reply.
 • If ANY care agent provides a response:
-      - BELOW their main output, produce a short summary (2–4 lines)
+      - BELOW their main output, produce a short summary (10 words).
         describing the essential advice or steps.
-• If a care agent fails to respond, times out, or returns an empty output:
+• Else a care agent fails to respond, times out, or returns an empty output:
       - Generate the required information yourself.
       - Complete the answer without mentioning any failure.
 
@@ -285,11 +294,9 @@ If any specialist agent does NOT respond:
 ---------------------------------------------------------
 
 For EVERY message where at least one specialist agent responds:
-   - Provide a concise summary below the main output.
+   - Provide a concise summary below the main output with 50 words.
    - The summary must include:
-        • What the advice was
         • Key steps or recommendations
-        • What the user should remember or do next
 
 ---------------------------------------------------------
 5. Session-End Summary
@@ -345,24 +352,7 @@ print("✅ Parallel and Sequential Agents created.")
 
 # Step 2: Set up Session Management
 # InMemorySessionService stores conversations in RAM (temporary)
-# session_service = InMemorySessionService()
-
-# Database session service
-import sqlite3
-
-def check_data_in_db():
-    with sqlite3.connect("my_agent_data.db") as connection:
-        cursor = connection.cursor()
-        result = cursor.execute(
-            "select app_name, session_id, author, content from events"
-        )
-        print([_[0] for _ in result.description])
-        for each in result.fetchall():
-            print(each)
-
-db_url = "sqlite:///my_agent_data.db"  # Local SQLite file
-session_service = DatabaseSessionService(db_url=db_url)
-
+session_service = InMemorySessionService()
 
 
 # Step 3: Create the Runner
@@ -372,18 +362,3 @@ print("✅ Stateful agent initialized!")
 print(f"   - Application: {APP_NAME}")
 print(f"   - User: {USER_ID}")
 print(f"   - Using: {session_service.__class__.__name__}")
-
-import asyncio
-
-async def main():
-    await run_session(
-        runner,
-         [
-             
-         ],
-        "stateful-agentic-session",
-    )
-    check_data_in_db()
-
-if __name__ == "__main__":
-    asyncio.run(main())
