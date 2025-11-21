@@ -1,13 +1,13 @@
-⚡ Ultron — Autonomous Multi-Skill AI Agent
+#### ⚡ Ultron — Autonomous Multi-Skill AI Agent
 
 
-🧩 Problem Statement
+### 🧩 Problem Statement
 
 Modern developers often need an intelligent layer that can reason through tasks, break down problems, maintain context, and assist across multiple domains like coding, analysis, summaries, or planning. Traditional LLM interactions are stateless, single-shot, and cannot execute multi-step logic.
 
 Ultron solves this by behaving like an autonomous reasoning loop capable of acting, planning, and reflecting — all from a lightweight, single-file agent.
 
-🤖 Why Agents?
+### 🤖 Why Agents?
 
 Agents are the right model for this problem because they provide:
 
@@ -23,7 +23,7 @@ Future scalability toward multi-agent ecosystems
 
 This transforms an LLM into a programmable reasoning system rather than a text generator.
 
-🏗️ What You Created — Architecture Overview
+### 🏗️ What You Created — Architecture Overview
 
 Ultron is implemented entirely in agent.py, using a compact but extensible design.
 
@@ -53,7 +53,7 @@ Reliable for iterative agent loops
 
 This makes model calls simple and debuggable.
 
-🛠️ 3. Tool Interface
+### 🛠️ 3. Tool Interface
 
 Designed for:
 
@@ -65,7 +65,7 @@ Custom skill modules
 
 Future expansions like search or file operations
 
-🧩 4. Orchestrator Controller
+### 🧩 4. Orchestrator Controller
 
 Coordinates the entire loop:
 
@@ -79,7 +79,7 @@ Session-level state
 
 Clean, minimal, and highly extensible.
 
-🎥 Demo — Example Interaction
+### 🎥 Demo — Example Interaction
 
 User:
 “Generate a 3-step plan to build a text-classification pipeline.”
@@ -95,8 +95,8 @@ Evaluate + optimize
 
 The agent automatically plans, reasons, and produces structured output driven through Gemini.
 
-🛠️ The Build — Tools & Technologies
-🔨 Core Tools
+### 🛠️ The Build — Tools & Technologies
+### 🔨 Core Tools
 
 Python 3.10+
 
@@ -104,7 +104,7 @@ Gemini CLI (primary backend)
 
 Google Generative AI SDK (optional secondary)
 
-🧬 Internal Design Patterns
+### 🧬 Internal Design Patterns
 
 ReAct-inspired reasoning
 
@@ -126,7 +126,7 @@ Reliable structured outputs
 
 Great for controlled reasoning cycles
 
-🚀 If I Had More Time, This Is What I'd Do
+### 🚀 If I Had More Time, This Is What I'd Do
 
 Add long-term memory (vector DB / JSON store)
 
