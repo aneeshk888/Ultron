@@ -7,6 +7,9 @@ Modern developers often need an intelligent layer that can reason through tasks,
 
 Ultron solves this by behaving like an autonomous reasoning loop capable of acting, planning, and reflecting — all from a lightweight, single-file agent.
 
+
+
+
 ### 🤖 Why Agents?
 
 Agents are the right model for this problem because they provide:
@@ -22,6 +25,10 @@ Better decision pathways than a single LLM completion
 Future scalability toward multi-agent ecosystems
 
 This transforms an LLM into a programmable reasoning system rather than a text generator.
+
+
+
+
 
 ### 🏗️ What You Created — Architecture Overview
 
@@ -65,6 +72,9 @@ Custom skill modules
 
 Future expansions like search or file operations
 
+
+
+
 ### 🧩 4. Orchestrator Controller
 
 Coordinates the entire loop:
@@ -78,6 +88,10 @@ Reflection monitoring
 Session-level state
 
 Clean, minimal, and highly extensible.
+
+
+
+
 
 ### 🎥 Demo — Example Interaction
 
@@ -95,7 +109,14 @@ Evaluate + optimize
 
 The agent automatically plans, reasons, and produces structured output driven through Gemini.
 
+
+
+
+
 ### 🛠️ The Build — Tools & Technologies
+
+
+
 ### 🔨 Core Tools
 
 Python 3.10+
@@ -104,7 +125,7 @@ Gemini CLI (primary backend)
 
 Google Generative AI SDK (optional secondary)
 
-### 🧬 Internal Design Patterns
+🧬 Internal Design Patterns
 
 ReAct-inspired reasoning
 
@@ -125,6 +146,11 @@ Shell-friendly for testing
 Reliable structured outputs
 
 Great for controlled reasoning cycles
+
+
+
+
+
 
 ### 🚀 If I Had More Time, This Is What I'd Do
 
