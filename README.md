@@ -91,9 +91,8 @@ adk web --port 2000
 
 ### Demo
 
-<img width="1585" height="203" alt="Screenshot 2025-11-22 145635" src="https://github.com/user-attachments/assets/8f5ca60f-689d-4b3e-a754-5a1b5c02c939" />
-<img width="1918" height="897" alt="Screenshot 2025-11-22 145553" src="https://github.com/user-attachments/assets/da41b60f-5ccc-44f4-8197-2ca18f61711a" />
-<img width="1903" height="884" alt="Screenshot 2025-11-22 145546" src="https://github.com/user-attachments/assets/61e51176-1c77-4b46-ac99-4715dd2ac380" />
+
+
 
 
 
