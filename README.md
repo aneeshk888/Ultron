@@ -66,7 +66,7 @@ adk run myagent
 
 # Launch the web interface on port 2000
 adk web --port 2000
-
+```
 
 ### Architecture 
     User([User]) --> Aggregator[Health Aggregator Agent]
@@ -105,18 +105,20 @@ This project thrives on collaboration, and we welcome improvements, bug fixes, n
 
 ## 🧩 How to Contribute
 
+
+```bash
 ### 1. Fork the Repository
 Create your own fork of the project to work independently.
 
 ### 2. Clone Your Fork
-```bash
+
 git clone https://github.com/<your-username>/Ultron.git
 cd Ultron
 
 ### 3. Create a Branch
-git checkout -b feature/add-sleep-care-agent<img width="1914" height="831" alt="Screenshot 2025-11-08 133410" src="https://github.com/user-attachments/assets/fc53e93b-c46f-459c-b79c-2b836b22e9d0" />
+git checkout -b feature/add-sleep-care-agent
 
-
+```
 
 
 MIT License
