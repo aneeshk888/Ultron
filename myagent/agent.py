@@ -210,9 +210,9 @@ gym_care_agent = Agent(
 print("✅ Fitness Trainer Agent created.")
 
 
-meal_planner_agent = Agent(
+diet_planner_agent = Agent(
     model='gemini-2.5-flash',
-    name='meal_planner_agent',
+    name='diet_planner_agent',
     description="I am your meal planner agent who helps user create healthy diet plans",
     instruction=
     """
@@ -339,7 +339,7 @@ print("✅ Aggregator Agent created.")
 # The ParallelAgent runs all its sub-agents simultaneously.
 Care_team = ParallelAgent(
     name="HealthCareTeam",
-    sub_agents=[hair_care_agent, skin_care_agent, gym_care_agent, meal_planner_agent],
+    sub_agents=[hair_care_agent, skin_care_agent, gym_care_agent, diet_planner_agent],
 )
 
 # This SequentialAgent defines the high-level workflow: run the parallel team first, then run the aggregator.
