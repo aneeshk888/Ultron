@@ -1,5 +1,9 @@
 # Ultron 🧑‍⚕️🤖
 
+## 📌 Mindmap
+<img width="5089" height="8038" alt="NotebookLM Mind Map" src="https://github.com/user-attachments/assets/0db8c4ba-47ac-44da-8935-269058ac76aa" />
+
+
 ## 📌 Summary
 Ultron is a unified health‑care AI system designed to simplify wellness management. Instead of searching for separate solutions for hair, skin, diet, and fitness, Ultron aggregates specialized agents into one orchestrated framework. The **Health Aggregator Agent** ensures all domains work together seamlessly, giving users a clear, reproducible, and holistic experience.
 
