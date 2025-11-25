@@ -1,7 +1,8 @@
 # Ultron 🧑‍⚕️🤖
 
 ## 📌 Mindmap
-<img width="5089" height="8038" alt="NotebookLM Mind Map" src="https://github.com/user-attachments/assets/0db8c4ba-47ac-44da-8935-269058ac76aa" />
+<img width="5178" height="9537" alt="NotebookLM Mind Map (1)" src="https://github.com/user-attachments/assets/9782dfb2-99a7-4699-b84d-d98efd80148c" />
+
 
 
 ## 📌 Summary
